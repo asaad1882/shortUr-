@@ -1,0 +1,54 @@
+server:  
+  port: ${PORT:8090}  
+broker:
+  enabled: ${BROKER_ENABLED:false}
+  host: ${BROKER_HOST:tcp://192.168.200.67:61616}
+  port: ${BROKER_PORT:61613}
+  login: ${BROKER_LOGIN:guest}
+  password: ${BROKER_PASSWORD:guest}
+  virtual-host: ${BROKER_VIRTUAL_HOST:}
+spring:
+  output:
+    ansi:
+        enabled: DETECT
+  jmx:
+    enabled: false 
+  application:
+    name: VidsysProxy
+  database:   
+    driverClassName: org.h2.Driver    
+  datasource:
+    url: jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1   
+    username: ${username:root}
+    password: ${password:root}
+  
+  
+    
+security:
+    user:
+      password: password
+    oauth2:
+      resource:
+        filter-order: 3
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+          
+ribbon:
+  eureka:
+    enabled: true
+
+logging:
+  file: /app/iotservices/vidsys/logs/application-vidsys-proxy.log
+  level:
+    root: ERROR
+    org.springframework.web: DEBUG
+    net.visionvalley.iotservices: DEBUG
+    org.hibernate: ERROR
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr([${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]){yellow} %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr([${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]){yellow} %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"

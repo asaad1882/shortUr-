@@ -1,0 +1,32 @@
+server:  
+  port: ${PORT:8090}
+spring:
+  output:
+    ansi:
+        enabled: DETECT
+  application:
+    name: Vanilla
+  database:   
+    driverClassName: org.h2.Driver    
+  datasource:
+    url: jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1   
+    username: ${username:root}
+    password: ${password:root}
+  
+    
+security:
+    user:
+      password: password
+    oauth2:
+      resource:
+        filter-order: 3
+logging:
+  file: /app/iotservices/vidsys/logs/application-vidsys-proxy.log
+  level:
+    root: ERROR
+    org.springframework.web: DEBUG
+    net.visionvalley.iotservices: DEBUG
+    org.hibernate: ERROR
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr([${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]){yellow} %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr([${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]){yellow} %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
