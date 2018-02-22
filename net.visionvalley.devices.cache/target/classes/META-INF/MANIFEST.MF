@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: spring-boot-ehcache-example
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: assma
+Implementation-Vendor-Id: net.visionvalley.devices.cache
+Build-Jdk: 1.8.0_161
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

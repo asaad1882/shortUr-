@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.2" icons="true" automaticImage="JPEG" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.lang.Object" project="net.visionvalley.devices.cache" 
+    file="C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar" binary="true" label="object" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="352" y="0"/>    
+    <execution id="2">      
+      <position height="315" width="60" x="5" y="102"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="net.visionvalley.iot.smac.cache.rest.DeviceController" 
+    project="net.visionvalley.devices.cache" 
+    file="/net.visionvalley.devices.cache/src/main/java/net/visionvalley/iot/smac/cache/rest/DeviceController.java" 
+    binary="false" label="deviceController" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="167" y="0"/>    
+    <execution id="4">      
+      <position height="273" width="159" x="69" y="123"/>    
+    </execution>  
+  </object>  
+  <object id="8" language="java" name="net.visionvalley.iot.smac.cache.service.DeviceService" 
+    project="net.visionvalley.devices.cache" 
+    file="/net.visionvalley.devices.cache/src/main/java/net/visionvalley/iot/smac/cache/service/DeviceService.java" 
+    binary="false" label="deviceService" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="7">      
+      <position height="231" width="0" x="0" y="144"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="net.visionvalley.iot.smac.cache.repository.DeviceRepository" 
+    project="net.visionvalley.devices.cache" 
+    file="/net.visionvalley.devices.cache/src/main/java/net/visionvalley/iot/smac/cache/repository/DeviceRepository.java" 
+    binary="false" label="deviceRepository" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="10">      
+      <position height="21" width="0" x="0" y="165"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="105" width="0" x="0" y="207"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="org.springframework.data.redis.core.RedisTemplate" 
+    project="net.visionvalley.devices.cache" 
+    file="C:/Users/assma/.m2/repository/org/springframework/data/spring-data-redis/1.6.4.RELEASE/spring-data-redis-1.6.4.RELEASE.jar" 
+    binary="true" label="redisTemplate" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="17">      
+      <position height="21" width="0" x="0" y="228"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" name="org.springframework.data.redis.core.ValueOperations" 
+    project="net.visionvalley.devices.cache" 
+    file="C:/Users/assma/.m2/repository/org/springframework/data/spring-data-redis/1.6.4.RELEASE/spring-data-redis-1.6.4.RELEASE.jar" 
+    binary="true" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="19">      
+      <position height="21" width="0" x="0" y="270"/>    
+    </execution>  
+  </object>  
+  <object id="22" language="java" name="net.visionvalley.iot.smac.cache.domain.Device" 
+    project="net.visionvalley.devices.cache" 
+    file="/net.visionvalley.devices.cache/src/main/java/net/visionvalley/iot/smac/cache/domain/Device.java" 
+    binary="false" label="device" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="14">      
+      <position height="21" width="0" x="0" y="333"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="update(net.visionvalley.iot.smac.cache.domain.Device):net.visionvalley.iot.smac.cache.domain.Device" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" 
+    operation="save(net.visionvalley.iot.smac.cache.domain.Device):net.visionvalley.iot.smac.cache.domain.Device" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="9" operation="save(net.visionvalley.iot.smac.cache.domain.Device):void" asynchronous="false">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="findById(java.lang.String):net.visionvalley.iot.smac.cache.domain.Device" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="getMacAddress():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="16" operation="opsForValue():org.springframework.data.redis.core.ValueOperations&lt;K,V&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" operation="get(java.lang.Object):V" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>
+</sequence-diagram>
