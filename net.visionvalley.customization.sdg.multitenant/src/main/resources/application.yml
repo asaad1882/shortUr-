@@ -1,0 +1,17 @@
+server:  
+  port: ${PORT:8091}
+
+spring:
+  
+ datasource:
+   driver-class-name: com.mysql.jdbc.Driver
+   url: jdbc:mysql://${DATABASE_URL:192.168.200.67:3306}/PacketDb
+   username: ${USERNAME:iotadmin}
+   password: ${DB_PASSWORD:Dbst@321}
+   tomcat:
+    max-wait: 20000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+    
+   

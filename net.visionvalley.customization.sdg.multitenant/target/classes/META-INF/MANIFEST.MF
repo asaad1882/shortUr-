@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: sdg-multitenant
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: assma
+Implementation-Vendor-Id: net.visionvalley.customization.sdg.multitena
+ nt
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/net.visionva
+ lley.customization.sdg.multitenant/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
